@@ -1,4 +1,4 @@
-var t=document.querySelectorAll('li')[2];
+let t=document.querySelectorAll('li')[2];
 t.innerHTML="subhadip";
-var but=document.getElementById('btn');
-but.style.background='red';
+let but=document.getElementById('btn');
+but.style.background='yellow';
