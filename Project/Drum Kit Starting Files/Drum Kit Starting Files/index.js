@@ -1,6 +1,8 @@
 function handelclick() {
   var buttonInnerHtml = this.innerHTML;
   makeSound(buttonInnerHtml);
+  buttonAnimation(buttonInnerHtml);
+
 }
 
 for (const element of document.querySelectorAll(".drum")) {
@@ -8,7 +10,8 @@ for (const element of document.querySelectorAll(".drum")) {
 }
 
 document.addEventListener('keydown',function(event){
-makeSound(event.key)
+makeSound(event.key);
+buttonAnimation(event.key);
 });
 
 function makeSound(key){
@@ -47,4 +50,15 @@ function makeSound(key){
     default:
       break;
   }
+}
+
+function buttonAnimation(currentKey){
+
+ let activebutton=document.querySelector("."+currentKey) ;
+ activebutton.classList.add("pressed");
+ setTimeout(function(){
+  activebutton.classList.remove("pressed");
+
+ },100)
+
 }
