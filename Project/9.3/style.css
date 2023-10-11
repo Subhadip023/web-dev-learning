@@ -1,0 +1,28 @@
+.contaner{
+    height: 200px;
+    display: flex;
+    background-color:rgba(128, 128, 128, 0.801);
+    justify-content: space-between;
+    padding-inline: 10px;
+align-items:center;
+gap: 30px;
+}
+
+.item1{
+    height: 100px;
+    background-color: aqua;
+    flex-basis: 200px;
+    flex-grow: 1;
+}
+.item2{
+    height: 100px;
+    background-color: aqua;
+    flex-basis: 200px;
+    flex-shrink: 0;
+}
+.item3{
+    height: 100px;
+    background-color: aqua;
+    flex-basis: 400px;
+    flex-shrink: 0;
+}
