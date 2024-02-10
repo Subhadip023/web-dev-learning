@@ -1,0 +1,12 @@
+mkdir 
+ls 
+ls-a
+cd
+cd ..
+ctrl a for start command ctrl+e for end line of the command 
+ctrl+u for clear command line 
+touch 
+rm
+rm * remove all element 
+pwd --> Print Working Directory
+
