@@ -12,7 +12,7 @@ app.get("/", (req, res) => {
 
 app.post("/submit", (req, res) => {
   const numLetters = req.body["fName"].length + req.body["lName"].length;
-  console.log(numLetters);
+  // console.log(numLetters);
   res.render("index.ejs", { numberLetters: numLetters }); // Changed key to match template
 });
 
