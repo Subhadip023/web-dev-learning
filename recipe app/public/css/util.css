@@ -9,6 +9,20 @@
     --color3:#ADBC9F;
     --color4:#FBFADA;
   }
+ img{
+height: 250px;
+width: 300px;
+border: 5px solid var(--color3);
+border-radius: 20px;
+ }
 
+button{
+    background:var(--color2);
+    height: 30px;
+    width: 100px;
+    border-radius: 50px;
+    border: 2px solid var(--color2);
+    color: var(--color4);
+ }
   
   
