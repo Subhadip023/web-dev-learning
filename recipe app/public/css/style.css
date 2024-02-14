@@ -12,27 +12,39 @@
 }
 .input{
     /* background:red; */
+    border-radius: 30px;
     margin: 10px auto;
-    height: 5vh;
+    height: 6vh;
     width: 60vw;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    border: 2px solid var(--color4);
+}
+svg{
+    height: 5vh;
+    width: 5vw;
 }
 input {
     background: transparent;
-    width: 60vw;
-    height: 4.5vh; 
-    border-radius: 20px;
-    color: aqua;
+    width: 50vw;
+    height: 5vh; 
+    color: var(--color4);
+    font-size: 25px;
+    border: 2px solid transparent;
 
 }
-input:focus{
-    border: 1px solid gray;
+input:checked{
+    border: 2px solid red;
 }
-.input input textarea{
-    color: aqua;
-}
+
+input[type="search"]::placeholder {
+    color: var(--color4);
+    padding: 0 30px ;
+    font-size: 25px;
+    opacity: .7;
+ }
+ 
 
 .recipes{
    margin: auto;
