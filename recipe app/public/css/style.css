@@ -1,0 +1,10 @@
+.contaner{
+    background-color: var(--bg-color);
+    color: var(--color4);
+    font-family: serif;
+    height: 100vh;
+    width: 100vw;
+}
+.recipes{
+    background: #000;
+}
