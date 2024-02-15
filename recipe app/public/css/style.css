@@ -2,13 +2,17 @@
     background-color: var(--bg-color);
     color: var(--color4);
     font-family: "IBM Plex Serif", serif;
-    height: 100vh;
-    width: 100vw;
+    /* height: 100vh; */
+    /* width: 100vw; */
+    /* overflow: hidden; */
+    display: flex;
+    flex-direction: column;
 }
 .title{
     /* background: #000; */
     font-size: 50px;
     text-align: center;
+    margin-bottom: 5vh;
 }
 .input{
     /* background:red; */
@@ -25,7 +29,14 @@ svg{
     height: 5vh;
     width: 5vw;
 }
+svg:hover{
+    height: 5.5vh;
+}
+
 input {
+    padding-left: 20px;
+    border-radius: 30px;
+
     background: transparent;
     width: 50vw;
     height: 5vh; 
@@ -34,9 +45,7 @@ input {
     border: 2px solid transparent;
 
 }
-input:checked{
-    border: 2px solid red;
-}
+
 
 input[type="search"]::placeholder {
     color: var(--color4);
@@ -44,21 +53,44 @@ input[type="search"]::placeholder {
     font-size: 25px;
     opacity: .7;
  }
- 
 
-.recipes{
-   margin: auto;
-    background: #000;
+ .recipes {
+    margin: auto;
+    margin-top: 10vh;
+    /* background: #000; */
     display: flex;
     flex-wrap: wrap;
     gap: 50px;
     width: 90vw;
+    align-items: center;
+    justify-content: center;
+    overflow-x: auto; /* Add this line */
+    overflow-y: hidden; /* Hide vertical scrollbar */
 }
+
+
 .recipe{
-    padding: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 350px;
-    background: blue;
+    gap:10px;
+    /* background: blue; */
+}
+.recipe .heading{
+text-align: center;
+font-size:35px ;
+}
+
+
+#recipe_details {
+    display: none;
+    margin: auto;
+    background: #000;
+    position: fixed; /* Set the recipe_details to absolute positioning */
+    top: 10%; /* Align it to the top of the container */
+    left: 10%; /* Align it to the left of the container */
+    height: 70%;
+    width: 80%; /* Take up the full width */
+    z-index: 1; /* Ensure it appears above other elements */
 }
