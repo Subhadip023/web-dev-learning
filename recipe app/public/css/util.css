@@ -30,6 +30,7 @@ border-radius: 20px;
   
  .recipe button:hover{
 background: var(--color3);
+color: #12372A;
 border: 2px solid var(--bg-color);
 font-size: 21px;
 cursor:pointer;

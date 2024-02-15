@@ -7,12 +7,13 @@
     /* overflow: hidden; */
     display: flex;
     flex-direction: column;
+    min-height: 100vh;
 }
 .title{
     /* background: #000; */
     font-size: 50px;
     text-align: center;
-    margin-bottom: 5vh;
+    margin: 5vh 0 ;
 }
 .input{
     /* background:red; */
