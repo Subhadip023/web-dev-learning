@@ -11,7 +11,7 @@
 }
 .title{
     /* background: #000; */
-    font-size: 50px;
+    font-size: 3rem;
     text-align: center;
     margin: 5vh 0 ;
 }
@@ -30,8 +30,13 @@ svg{
     height: 5vh;
     width: 5vw;
 }
-svg:hover{
-    height: 5.5vh;
+.input svg:hover{
+    height:110%;
+    width: 100%;
+}
+.input svg{
+    height:100%;
+    width: 100%;
 }
 
 input {
@@ -50,14 +55,13 @@ input {
 
 input[type="text"]::placeholder {
     color: var(--color4);
-    padding: 0 30px ;
+    padding: 0 20px ;
     font-size: 25px;
     opacity: .7;
     border: 2px transparent;
  }
 
- input[type="text"]::placeholder:focus {
-background: red; }
+
 
  .recipes {
     margin: auto;
@@ -70,6 +74,7 @@ background: red; }
     justify-content: center;
     overflow-x: auto; /* Add this line */
     overflow-y: hidden; /* Hide vertical scrollbar */
+    /* background: #000; */
 }
 
 
@@ -88,7 +93,7 @@ font-size:35px ;
 
 
 #recipe_details {
-    display: flex;
+    display: none;
     margin: auto;
     /* background: #000; */
     position: fixed; /* Set the recipe_details to absolute positioning */
@@ -108,7 +113,7 @@ font-size:35px ;
     padding:20px;
     height: 90%;
     width: 90%;
-    background:#fbfada42;
+    background:#fbfada9a;
     overflow: auto;
     align-items: center;
 backdrop-filter: blur(10px);
@@ -137,3 +142,33 @@ color: var(--bg-color);
     border-radius:200px;  
 
 }
+
+
+::-webkit-scrollbar {
+display: none;  }
+  
+  .contaner::-webkit-scrollbar-track {
+    background-color:transparent;
+    border-radius: 100px;
+  }
+  
+  .contaner::-webkit-scrollbar-thumb {
+    background-color:var(--color2);
+    border-radius:200px;  }
+/* Default background color for the form */
+#recipeSearchForm {
+    background-color: transparent; /* Default background color */
+  }
+  
+  /* Change background color when input is focused */
+  #ingredientInput:focus {
+    background-color: transparent; /* New background color when input is focused */
+    border: transparent;
+  }
+
+  /* Change background color when input has value entered */
+  #ingredientInput:not(:placeholder-shown) + #recipeSearchForm {
+    background-color: transparent; /* New background color when input has value */
+    border: transparent;
+  }
+  
