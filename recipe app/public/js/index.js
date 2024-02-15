@@ -41,5 +41,5 @@ const getDetails=async(id)=>{
   console.log(typeof meal)
   console.log( meal.strInstructions)
   console.log( meal.strIngredient1)
-  recipe_details.style.display="block";
+  recipe_details.style.display="flex";
 }
