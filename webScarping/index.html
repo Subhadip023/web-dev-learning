@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>News Headlines</title>
+</head>
+<body>
+  <h1>Latest News Headlines</h1>
+  <ul id="news-list"></ul>
+
+  <script>
+   const puppeteer = require('puppeteer');
+
+(async () => {
+  const browser = await puppeteer.launch();
+  const page = await browser.newPage();
+
+  await page.goto('https://sudiptosfi.com/');
+
+  // Wait for the news headlines to load
+  await page.waitForSelector('.post-title');
+
+  // Extract news headlines
+  const headlines = await page.evaluate(() => {
+    const headlines = [];
+    const headlineElements = document.querySelectorAll('.post-title');
+    headlineElements.forEach(headline => {
+      headlines.push(headline.textContent.trim());
+    });
+    return headlines;
+  });
+
+  console.log('News Headlines:');
+  headlines.forEach((headline, index) => {
+    console.log(`${index + 1}. ${headline}`);
+  });
+
+  await browser.close();
+})();
+
+  </script>
+</body>
+</html>
