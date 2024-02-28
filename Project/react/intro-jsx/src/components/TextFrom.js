@@ -15,7 +15,7 @@ export default function TextForm(props) {
   const handlenoChange =(event)=>{
     setText(event.target.value)
   }
-  const [text, setText] = useState("Enter text here");
+  const [text, setText] = useState("");
   return (
     <>
     <div className="container">
@@ -28,7 +28,7 @@ export default function TextForm(props) {
     </div>
 <div className="container my-3">
 <h2>Your text summery </h2>
-<p>{text.split(" ").length} worlds ,{text.length} charecters </p>
+<p><b>{text.split(" ").length}</b>  worlds ,{text.length} charecters </p>
 <p>{0.008*text.split(" ").length} mint read</p>
 <h3>Preview</h3>
 <p>{text}</p>
