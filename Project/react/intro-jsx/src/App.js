@@ -8,7 +8,7 @@ function App() {
     <>
   
 <Navbar title="TextUtil"/>
-<TextFrom header="Enter the text to analyze Below"/>
+<TextFrom heading="Enter the text to analyze Below"/>
 </>
 
   );
