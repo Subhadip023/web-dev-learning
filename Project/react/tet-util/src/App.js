@@ -9,9 +9,8 @@ import React from "react";
 
 import {
   BrowserRouter as Router,
-  Switch,
-  Route,
-  Routes
+  Routes,
+  Route
 } from "react-router-dom";
 
 let name = 'subhadip Chakraborty';
@@ -20,28 +19,27 @@ function App() {
   const [Mode, setMode] = useState('light');
   const [alert, setAlert] = useState(null);
 
-  const showAlert=(massage,type)=>{
+  const showAlert = (message, type) => {
     setAlert({
-      msg:massage,
-      type:type
+      msg: message,
+      type: type
     })
-    setTimeout(()=>{
+    setTimeout(() => {
       setAlert(null);
-    },2000)
+    }, 2000)
   }
-  
+
   const toggleMode = () => {
     if (Mode === 'light') {
       setMode('dark');
-      document.body.style.backgroundColor="black";
-      document.body.style.color="white";
-      showAlert("Dark mode has been activate","success");
+      document.body.style.backgroundColor = "black";
+      document.body.style.color = "white";
+      showAlert("Dark mode has been activated", "success");
     } else {
       setMode('light');
-      document.body.style.backgroundColor="white";
-      document.body.style.color="black";
-      showAlert("light mode has been activate","success");
-
+      document.body.style.backgroundColor = "white";
+      document.body.style.color = "black";
+      showAlert("Light mode has been activated", "success");
     }
   };
 
@@ -49,15 +47,12 @@ function App() {
     <>
       <Navbar title="TextUtil" mode={Mode} toggleMode={toggleMode} />
       {alert && <Alert alert={alert} />}
-      {/* <TextFrom showAlert={showAlert} heading="Enter the Text to Analyze Below" /> */}
-
       <Router>
-  <Routes>
-    <Route path="/about" element={<About />} />
-    <Route path="/" element={<TextFrom showAlert={showAlert} heading="Enter the Text to Analyze Below" />} />
-  </Routes>
-</Router>
-
+        <Routes>
+          <Route path="/about" element={<About />} />
+          <Route path="/" element={<TextFrom showAlert={showAlert} heading="Enter the Text to Analyze Below" />} />
+        </Routes>
+      </Router>
     </>
   );
 }
