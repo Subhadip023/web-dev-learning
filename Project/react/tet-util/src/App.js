@@ -6,8 +6,13 @@ import About from './components/About';
 import { useState } from 'react';
 import Alert from './components/Alert';
 import React from "react";
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-
+import React from "react";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 
 let name = 'subhadip Chakraborty';
 
@@ -44,6 +49,8 @@ function App() {
     <>
       <Navbar title="TextUtil" mode={Mode} toggleMode={toggleMode} />
       {alert && <Alert alert={alert} />}
+      <TextFrom showAlert={showAlert} heading="Enter the Text to Analyze Below" />
+{/* 
       <Router>
         <Switch>
           <Route path="/about">
@@ -53,7 +60,7 @@ function App() {
             <TextFrom showAlert={showAlert} heading="Enter the Text to Analyze Below" />
           </Route>
         </Switch>
-      </Router>
+      </Router> */}
     </>
   );
 }
