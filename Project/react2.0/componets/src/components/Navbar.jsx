@@ -5,9 +5,9 @@ export default function Navbar() {
     <div>
       <ul>
   <li><a className='active' href="default.asp">Home</a></li>
-  <li><a href="news.asp">News</a></li>
-  <li><a href="contact.asp">Contact</a></li>
-  <li><a href="about.asp">About</a></li>
+  <li><a href="#">News</a></li>
+  <li><a href="#">Contact</a></li>
+  <li><a href="#">About</a></li>
 </ul>
     </div>
   )
