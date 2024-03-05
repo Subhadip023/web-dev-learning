@@ -6,26 +6,31 @@ import './App.css'
 function App() {
   const [count, setCount] = useState(0)
   const [showbtn, setshowbtn] = useState(false)
-
   const [todos, setTodos] = useState([
     {
-    title: "Hey",
-    desc: "I am a good todo"
+      title: "Hey",
+      desc: "I am a good todo"
     },
-    {title: "Hey Another todo",
-    desc: "I am a good todo too"},
-    {title: "Hey I am grocery todo",
-    desc: "I am a good todo but I am grocery todo",}])
-  
-const Todo=({todo})=>{
-  
-  return(<>
-  <div m-4 className="border-1">
-  <div className="todo">{todo.title}</div>
-<div className="todo">{todo.desc}</div>
-  </div>
+    {
+      title: "Hey Another todo",
+      desc: "I am a good todo too"
+    },
+    {
+      title: "Hey I am grocery todo",
+      desc: "I am a good todo but I am grocery todo"
+    },
 
-</>)};
+  ])
+
+  // const Todo = ({todo}) => {
+  //   return (<>
+  //   <div className="m-4 border border-1 border-purple-400">
+
+  //     <div className="todo">{todo.title}</div>
+  //     <div className="todo">{todo.desc}</div>
+  //   </div>
+  //     </>)
+  // }
 
   return (
     <>
@@ -38,19 +43,20 @@ const Todo=({todo})=>{
         </a>
       </div>
       <h1>Vite + React</h1>
-      {
-        showbtn && <button>this is if showbtn is true</button>
-      }
+      {showbtn ? <button>showbtn is true</button> : <button>showbtn is false</button>}
+      {/* {showbtn && <button>showbtn is true</button>} */}
 
-{todos.map(todo=>{
-  return <Todo todo={todo}/>
-})}
+      {todos.map(todo => {
+        // return <Todo key={todo.title} todo={todo}/>
+        return <div key={todo.title} className="m-4 border border-1 border-purple-400">
+
+          <div className="todo">{todo.title}</div>
+          <div className="todo">{todo.desc}</div>
+        </div>
+      })}
       <div className="card">
-        {/* <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button> */}
-        <button onClick={() =>setshowbtn(!showbtn)}>
-          count is {count}
+        <button onClick={() => setshowbtn(!showbtn)}>
+          Toggle showbtn
         </button>
         <p>
           Edit <code>src/App.jsx</code> and save to test HMR
