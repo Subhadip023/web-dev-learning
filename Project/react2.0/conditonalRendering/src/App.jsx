@@ -6,10 +6,25 @@ import './App.css'
 function App() {
   const [count, setCount] = useState(0)
   const [showbtn, setshowbtn] = useState(false)
-const Todo=()=>{
+
+  const [todos, setTodos] = useState([
+    {
+    title: "Hey",
+    desc: "I am a good todo"
+    },
+    {title: "Hey Another todo",
+    desc: "I am a good todo too"},
+    {title: "Hey I am grocery todo",
+    desc: "I am a good todo but I am grocery todo",}])
+  
+const Todo=({todo})=>{
   
   return(<>
-<div className="todo">I'm todo</div>
+  <div m-4 className="border-1">
+  <div className="todo">{todo.title}</div>
+<div className="todo">{todo.desc}</div>
+  </div>
+
 </>)};
 
   return (
@@ -26,7 +41,10 @@ const Todo=()=>{
       {
         showbtn && <button>this is if showbtn is true</button>
       }
-      <Todo></Todo>
+
+{todos.map(todo=>{
+  return <Todo todo={todo}/>
+})}
       <div className="card">
         {/* <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
