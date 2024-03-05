@@ -6,6 +6,11 @@ import './App.css'
 function App() {
   const [count, setCount] = useState(0)
   const [showbtn, setshowbtn] = useState(false)
+const Todo=()=>{
+  
+  return(<>
+<div className="todo">I'm todo</div>
+</>)};
 
   return (
     <>
@@ -21,6 +26,7 @@ function App() {
       {
         showbtn && <button>this is if showbtn is true</button>
       }
+      <Todo></Todo>
       <div className="card">
         {/* <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
