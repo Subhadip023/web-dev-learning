@@ -7,3 +7,9 @@ body{
     --tw-bg-opacity: 1;
     background-color: rgb(226, 223, 239)
 }
+
+.green{
+    font-weight: bolder;
+    font-size: large;
+    /* color: green; */
+}

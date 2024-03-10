@@ -9,12 +9,12 @@ const Navbar = () => {
       </div>
       <ul className="flex gap-8 mx-9">
         <li className="cursor-pointer hover:font-bold transition-all">
-          <NavLink to="/" className="text-500" activeClassName="font-bold">
+          <NavLink to="/" className={(e)=>{return e.isActive?"green":''}}>
             Home
           </NavLink>
         </li>
         <li className="cursor-pointer hover:font-bold transition-all">
-          <NavLink to="/about" className="text-500" activeClassName="font-bold">
+          <NavLink to="/about" className={(e)=>{return e.isActive?"green":''}}>
             About
           </NavLink>
         </li>
